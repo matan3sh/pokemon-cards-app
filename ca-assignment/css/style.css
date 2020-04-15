@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefbb;
+  background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+  background: linear-gradient(to right, #d4d3dd, #efefbb);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato';
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+.logo {
+  width: 43px;
+  position: relative;
+  top: 43px;
+  right: 150px;
+}
+
+.logo-text {
+  font-size: 40px;
+}
+
+.poke-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-between;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.pokemon {
+  background-color: #eee;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.pokemon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.pokemon .image-container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  margin: 10px;
+}
+
+.pokemon .image-container img {
+  margin-top: 20px;
+  max-width: 90%;
+}
+
+.pokemon .info {
+  margin-top: 20px;
+}
+
+.pokemon .name {
+  margin: 15px 0 7px;
+  letter-spacing: 1px;
+}
+
+.btn {
+  margin: 10px 0;
+  width: 100px;
+  height: 30px;
+  color: #fff;
+  background-color: #a172c7;
+  border: 1px solid #d4d0d0;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  margin: 5% auto;
+  width: 16%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-header h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
+.modal-header {
+  background: linear-gradient(to right, #7167cc, #c5c5a3);
+  padding: 15px;
+  color: #fff;
+}
+
+.modal-body {
+  padding: 10px 20px;
+}
+
+.modal-footer {
+  background: linear-gradient(to right, #4bd68a, #c5c5a3);
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.closeBtn {
+  color: rgb(255, 255, 255);
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
